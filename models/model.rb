@@ -1,5 +1,4 @@
 require 'unirest'
-require 'pp'
 
 response = Unirest.post "https://aztro.sameerkumar.website?sign=aries&day=today"
 # response.code # Status code #200-ok

@@ -10,10 +10,12 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   
-  post '/' do
-    user_sign = paramas[:sign]
-    user_day = paramas[:day]
+  post '/result' do
+    @user_sign = params[:sign]
+    # @user_day = paramas[:day]
+    # @user_sign.get_info
     erb :result
   end
+  
   
 end

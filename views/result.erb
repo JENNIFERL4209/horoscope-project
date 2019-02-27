@@ -21,7 +21,7 @@
     <div class="container-fluid">
       <h1><%= @user_sign.capitalize + "!"%></h1>
       <% @daily_horoscope_hash.each do |information| %>
-        <%= information[0] + ":" + information[1]%>
+        <%= information[0] + ": " + information[1]%><br>
       <% end %>
       
     </div>

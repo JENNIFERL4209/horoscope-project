@@ -1,7 +1,10 @@
 require 'unirest'
+require 'pp'
 
-response = Unirest.post "https://aztro.sameerkumar.website?sign=aries&day=today"
-# response.code # Status code #200-ok
-# puts response.headers # Response headers
-puts response.body # Parsed body
-puts response.raw_body # Unparsed body
+url = 'https://aztro.sameerkumar.website?sign=sign&day=day' # the API URL
+uri = URI(url)  
+uri.query = 'sign=aries&day=today'  # this part will change to user inputed sign
+uri_string = uri.to_s
+response = Unirest.post uri_string # dynamic API link
+result = response.body # Parsed body # hash
+puts result[color]

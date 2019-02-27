@@ -20,7 +20,9 @@
     
     <div class="container-fluid">
       <h1>Horoscope!</h1>
-      <p><%= @user_sign %></p>
+      <% @daily_horoscope_hash.each do |information| %>
+        <p><%= information %></p>
+      <% end %>
     </div>
     
   </body>

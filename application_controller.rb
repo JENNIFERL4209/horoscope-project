@@ -14,7 +14,6 @@ class ApplicationController < Sinatra::Base
     @user_sign = params[:sign]
     # @user_day = paramas[:day]
     @daily_horoscope_hash = get_info(@user_sign)
-    
     erb :result
   end
   

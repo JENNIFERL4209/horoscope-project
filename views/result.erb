@@ -21,8 +21,11 @@
     <div class="container-fluid">
       <h1>Horoscope!</h1>
       <% @daily_horoscope_hash.each do |information| %>
-        <p><%= information %></p>
+        <% information.each do |info|%>
+          <p><%= info %></p>
+        <% end %>
       <% end %>
+      
     </div>
     
   </body>

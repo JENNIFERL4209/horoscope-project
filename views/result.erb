@@ -19,9 +19,11 @@
   <body>
     
     <div class="container-fluid">
+      <div class="jumbotron">
       <h1><%= @user_sign.capitalize + "!"%></h1>
+      </div>
       <% @daily_horoscope_hash.each do |information| %>
-        <%= information[0] + ": " + information[1]%><br>
+        <%= information[0] + ": " + information[1]%></b><br>
       <% end %>
       
     </div>

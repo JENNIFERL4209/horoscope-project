@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+    color:grey;
+    font-family: Optima, sans-serif;
+    font-weight:500;
+}
+
+div {
+    font-family: Optima, sans-serif;
+    font-weight:300
+}
+
+.jumbotron:hover {
+    background: rgba(0,0,0,0.15)
+}

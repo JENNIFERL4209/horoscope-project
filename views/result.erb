@@ -18,12 +18,15 @@
     </script>
   </head>
    <div class="container-fluid">
+     <div class = "jumbotron">
       <h1><%= @user_sign.capitalize + "!"%></h1>
+    </div>  
       <% @daily_horoscope_hash.each do |information| %>
-        <%= information[0].capitalize.gsub('_', ' ') + ": " + information[1]%><br>
+        <%= information[0].capitalize.gsub('_', ' ') + ": " + information[1]%></b><br>
       <% end %>
+    
        <!--https://www.ruby-forum.com/t/date-range-between-two-dates-need-help/159393/6-->
-      <%= (Date.parse(‘2009-02-25’)…Date.parse(‘2009-03-05’)).to_a %>
+      <!--<%# (Date.parse(‘2009-02-25’)…Date.parse(‘2009-03-05’)).to_a %>-->
     </div>
       
     

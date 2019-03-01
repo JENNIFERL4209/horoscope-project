@@ -18,4 +18,9 @@ div {
 
 span {
     font-weight: bold;
+    /*background: #def3ca;*/
+    /*padding: 3px;*/
+    /*float: left;*/
+    display: none;
 }
+

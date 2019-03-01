@@ -5,35 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>title</title>
     <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- bootstrap JS -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <!-- custom css -->
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <!-- custom JS -->
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> 
+    </script>
   </head>
-  <body>
-    
-    <div class="container-fluid">
-      <div class="jumbotron">
+   <div class="container-fluid">
+     <div class = "jumbotron">
       <h1><%= @user_sign.capitalize + "!"%></h1>
-      </div>
+    </div>  
       <% @daily_horoscope_hash.each do |information| %>
+
       <span>
-        <%=  information[0].gsub(/[_]/," ").capitalize%>
+        <%=  information[0].gsub("_"," ").capitalize%>
       </span>
         <%=":" + " " + information[1]%></b><br><br>
-      
       <% end %>
-      
-      
+    
+       <!--https://www.ruby-forum.com/t/date-range-between-two-dates-need-help/159393/6-->
+      <!--<%# (Date.parse(‘2009-02-25’)…Date.parse(‘2009-03-05’)).to_a %>-->
+    </div>
+    
+    <button id="shower">SHOW YOUR MATCH</button>
+    <div>
+      <!-- example of aries output-->
+      <span>Date range: Sep 23 - Oct 22</span> <br>
+      <span>Current date: February 28, 2019</span> <br>
+      <span>Description: After one more day of keeping a secret for a dear one, you've probably just about had it. If you're feeling like an unwitting accomplice, let the perpetrator know you're reaching the end of your patience.</span> <br>
+      <span>Mood: Impatient</span> <br>
+      <span>Color: Blue</span> <br>
+      <span>Lucky number: 36</span><br>
+      <span>Lucky time: 5pm</span> <br>
+      <span>programmers...</span>
     </div>
     <img src="images/<%=@user_sign%>.png">
    
     
+  
+    <script>
+      
+      $( "#shower" ).click(function() {
+        $( "span" ).show( 2000 );
+      });
+    </script>
+  
+   
+   
   </body>
 </html>

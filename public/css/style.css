@@ -14,8 +14,8 @@
 
 h1 {
     text-align: center;
-    color:grey;
-    font-family: Optima, sans-serif;
+    color:pink;
+    font-family: 'Lato',sans-serif;
     font-weight:500;
 }
 
@@ -27,7 +27,6 @@ div {
 
 .jumbotron:hover {
     background: rgba(0,0,0,0.15);
-    
 }
 
 span {

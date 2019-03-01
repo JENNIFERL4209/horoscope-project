@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+    color:grey;
+    font-family: Optima, sans-serif;
+    font-weight:500;
+}
+
+div {
+    font-family: Optima, sans-serif;
+    font-weight:300;
+    /*font-size-adjust: */
+}
+
+.jumbotron:hover {
+    background: rgba(0,0,0,0.15);
+    
+}
+
+span {
+    font-weight: bold;
+    /*background: #def3ca;*/
+    /*padding: 3px;*/
+    /*float: left;*/
+    display: none;
+}
+

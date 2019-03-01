@@ -23,10 +23,17 @@
       <h1><%= @user_sign.capitalize + "!"%></h1>
       </div>
       <% @daily_horoscope_hash.each do |information| %>
-        <%= information[0] + ": " + information[1]%></b><br>
+      <span>
+        <%=  information[0].gsub(/[_]/," ").capitalize%>
+      </span>
+        <%=":" + " " + information[1]%></b><br><br>
+      
       <% end %>
       
+      
     </div>
+    <img src="images/<%=@user_sign%>.png">
+   
     
   </body>
 </html>

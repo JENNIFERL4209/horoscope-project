@@ -29,10 +29,8 @@ div {
 }
 
 #match {
-    font-weight: bold;
-    /*background: #def3ca;*/
-    /*padding: 3px;*/
-    /*float: left;*/
+    margin: 3px;
     display: none;
+    text-align: center;
 }
 

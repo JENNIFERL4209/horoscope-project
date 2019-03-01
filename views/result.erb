@@ -15,7 +15,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="js/script.js"></script> 
-    </script>
+    
     <style>
       #wallpaper {
         background-image: url("../images/wallpaper/<%=@user_sign%>.png")
@@ -25,42 +25,45 @@
   <body>
     <div id="wallpaper"> </div>
     <div class="container-fluid">
-     <div class = "jumbotron">
-      <h1><%= @user_sign.capitalize + "!"%></h1>
-    </div>  
+      <div class = "jumbotron">
+        <h1><%= @user_sign.capitalize + "!"%></h1>
+      </div>  
       <% @daily_horoscope_hash.each do |information| %>
         <%=  information[0].gsub("_"," ").capitalize%>
         <%=":" + " " + information[1]%></b><br><br>
       <% end %>
     </div>
     
-   <div id = "match"> <% @user_compatibility_hash.each do |information| %>
-        <%=  information[0].gsub("_"," ").capitalize%>
-        <%=":" + " " + information[1]%></b><br><br>
-      <% end %> </div>
-    
-    <button id="shower">SHOW YOUR MATCH</button>
-    <div>
-      <!-- example of aries output-->
-      <span>Date range: Sep 23 - Oct 22</span> <br>
-      <span>Current date: February 28, 2019</span> <br>
-      <span>Description: After one more day of keeping a secret for a dear one, you've probably just about had it. If you're feeling like an unwitting accomplice, let the perpetrator know you're reaching the end of your patience.</span> <br>
-      <span>Mood: Impatient</span> <br>
-      <span>Color: Blue</span> <br>
-      <span>Lucky number: 36</span><br>
-      <span>Lucky time: 5pm</span> <br>
-      <span>programmers...</span>
-    </div>
-    <img src="images/zodiac/<%=@user_sign%>.png">
    
     
-  
+    <button>SHOW YOUR MATCH</button>
+    <button id="shower">Show</button>
+    <button id="hider">Hide</button>
+    <div class="container-fluid" id="match">
+      <div class = "jumbotron">
+        <h1><%= @user_sign.capitalize + "!"%></h1>
+      </div>  
+      <% @user_compatibility_hash.each do |information| %>
+        <%=  information[0].gsub("_"," ").capitalize%>
+        <%=":" + " " + information[1]%></b><br><br>
+      <% end %>
+    </div>
+    
+    
+    <img src="images/zodiac/<%=@user_sign%>.png">
+   
     <script>
-      
       $( "#shower" ).click(function() {
-        $( "#span" ).show;
+        $( "#match" ).first().show( "fast", function showNext() {
+          $( this ).next( "#match" ).show( 1000, showNext );
+        });
+      });
+       
+      $( "#hider" ).click(function() {
+        $( "#match" ).hide( 1000 );
       });
     </script>
+    
   
    
    

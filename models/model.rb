@@ -8,11 +8,10 @@ require 'unirest'
 # result = response.body # Parsed body # hash
 # puts result
 
-def get_info(user_sign)
+def get_info
     url = 'https://aztro.sameerkumar.website?sign=sign&day=day' # the API URL
     uri = URI(url)  
-    uri.query = "sign=#{user_sign}&day=today" # this part will change to user inputed sign
-    puts user_sign
+    uri.query = "sign=#{zodiac_sign(@user_date)}&day=today" # this part will change to user inputed sign
     uri_string = uri.to_s
     puts uri_string
     response = Unirest.post uri_string # dynamic API link
@@ -20,80 +19,81 @@ def get_info(user_sign)
     result
 end
 
-def zodiac_sign(month, day) 
-  if month == 1
-    if day < 20
-      sign = 'Capricorn'
-    else 
-      sign = 'Aquarius'  
-    end
-  elsif month == 2
-    if day < 19
-      sign = 'Aquarius'
-    else 
-      sign = 'Pisces'  
-    end
-  elsif month == 3
-    if day < 21
-      sign = 'Pisces'
-    else 
-      sign = 'Aries'  
-    end
-  elsif month == 4
-    if day < 20
-      sign = 'Aries'
-    else 
-      sign = 'Taurus'  
-    end
-  elsif month == 5
-    if day < 21
-      sign = 'Taurus'
-    else 
-      sign = 'Gemini'  
-    end
-  elsif month == 6
-    if day < 21
-      sign = 'Gemini'
-    else 
-      sign = 'Cancer'  
-    end
-  elsif month == 7
-    if day < 23
-      sign = 'Cancer'
-    else 
-      sign = 'Leo'  
-    end
-  elsif month == 8
-    if day < 23
-      sign = 'Leo'
-    else 
-      sign = 'Virgo'  
-    end
-  elsif month == 9
-    if day < 23
-      sign = 'Virgo'
-    else 
-      sign = 'Libra'  
-    end
-  elsif month == 10
-    if day < 23
-      sign = 'Libra'
-    else 
-      sign = 'Scorpio'  
-    end
-  elsif month == 11
-    if day < 22
-      sign = 'Scorpio'
-    else 
-      sign = 'Sagittarius'  
-    end
-  elsif month == 12
-    if day < 22
-      sign = 'Sagittarius'
-    else 
-      sign = 'Capricorn'
-    end
-  end
-  puts sign
-end
 
+def zodiac_sign(date) 
+    date_array =date.split('-')
+    if date[0].to_i.to_i == 1
+      if date[1].to_i.to_i < 20
+        sign = 'capricorn'
+      else
+        sign = 'aquarius'
+      end
+    elsif date[0].to_i == 2
+      if date[1].to_i < 19
+        sign = 'aquarius'
+      else
+        sign = 'pisces'
+      end
+    elsif date[0].to_i == 3
+      if date[1].to_i < 21
+        sign = 'pisces'
+      else
+        sign = 'aries'
+      end
+    elsif date[0].to_i == 4
+      if date[1].to_i < 20
+        sign = 'pries'
+      else
+        sign = 'taurus'
+      end
+    elsif date[0].to_i == 5
+      if date[1].to_i < 21
+        sign = 'taurus'
+      else
+        sign = 'gemini'
+      end
+    elsif date[0].to_i == 6
+      if date[1].to_i < 21
+        sign = 'gemini'
+      else
+        sign = 'cancer'
+      end
+    elsif date[0].to_i == 7
+      if date[1].to_i < 23
+        sign = 'cancer'
+      else
+        sign = 'leo'
+      end
+    elsif date[0].to_i == 8
+      if date[1].to_i < 23
+        sign = 'leo'
+      else
+        sign = 'virgo'
+      end
+    elsif date[0].to_i == 9
+      if date[1].to_i < 23
+        sign = 'virgo'
+      else
+        sign = 'libra'
+      end
+    elsif date[0].to_i == 10
+      if date[1].to_i < 23
+        sign = 'libra'
+      else
+        sign = 'scorpio'
+    end
+    elsif date[0].to_i == 11
+      if date[1].to_i < 22
+        sign = 'scorpio'
+      else
+        sign = 'sagittarius'
+      end
+    elsif date[0].to_i == 12
+      if date[1].to_i < 22
+        sign = 'sagittarius'
+      else
+        sign = 'capricorn'
+      end
+    end
+     sign
+end

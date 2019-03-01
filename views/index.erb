@@ -29,7 +29,8 @@
 <!--</html>-->
 
 <link rel="stylesheet" href="css/style.css" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
 
 <html lang="en">
 <head>
@@ -50,12 +51,17 @@
   
   <div class="container-fluid">
       <h1>Horoscope!</h1>
+      <p></p>
       <form method="post" action="/result">
         <!--Sign: <input type="text" name="sign"><br>-->
         <!--Day: <input type="text" name="day"><br>-->
         <p>Enter Your Birthday: <input type="text" name = "date" id="datepicker" placeholder="example: m/d/yyyy"required></p>
 
         <input type="submit" value="Get my horoscope!">
+        
+        <jumbotron>
+          <img src ="images/zodiac/all_signs.png">
+        </jumbotron>
       </form>
     </div>
  

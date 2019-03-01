@@ -18,14 +18,13 @@
     </script>
     <style>
       #wallpaper {
-    background-image: url("../images/wallpaper/<%=@user_sign%>.png")
-    
-}
+        background-image: url("../images/wallpaper/<%=@user_sign%>.png")
+      }
     </style>
   </head>
   <body>
     <div id="wallpaper"> </div>
-   <div class="container-fluid">
+    <div class="container-fluid">
      <div class = "jumbotron">
       <h1><%= @user_sign.capitalize + "!"%></h1>
     </div>  
@@ -33,11 +32,12 @@
         <%=  information[0].gsub("_"," ").capitalize%>
         <%=":" + " " + information[1]%></b><br><br>
       <% end %>
-
-       <!--https://www.ruby-forum.com/t/date-range-between-two-dates-need-help/159393/6-->
-      <!--<%# (Date.parse(‘2009-02-25’)…Date.parse(‘2009-03-05’)).to_a %>-->
     </div>
-   
+    
+   <div id = "match"> <% @user_compatibility_hash.each do |information| %>
+        <%=  information[0].gsub("_"," ").capitalize%>
+        <%=":" + " " + information[1]%></b><br><br>
+      <% end %> </div>
     
     <button id="shower">SHOW YOUR MATCH</button>
     <div>
@@ -58,7 +58,7 @@
     <script>
       
       $( "#shower" ).click(function() {
-        $( "span" ).show( 2000 );
+        $( "#match" ).show;
       });
     </script>
   

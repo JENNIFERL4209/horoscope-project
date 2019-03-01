@@ -14,15 +14,16 @@
 
 h1 {
     text-align: center;
-    color:pink;
-    font-family: 'Lato',sans-serif;
+    color: white;
+    font-family: 'Dancing Script', cursive;
     font-weight:500;
 }
 
 div {
-    font-family: Optima, sans-serif;
+    font-family: 'Source Serif Pro', serif;
     font-weight:300;
     /*font-size-adjust: */
+    text-align: center;
 }
 
 .jumbotron:hover {

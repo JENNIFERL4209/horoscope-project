@@ -11,9 +11,10 @@ class ApplicationController < Sinatra::Base
   end
   
   post '/result' do
-    @user_sign = params[:sign]
-    # @user_day = paramas[:day]
-    @daily_horoscope_hash = get_info(@user_sign)
+    
+    @user_date = params[:date] 
+    @user_sign = zodiac_sign(@user_date)
+    @daily_horoscope_hash = get_info
     erb :result
   end
   

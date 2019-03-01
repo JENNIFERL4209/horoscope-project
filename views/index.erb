@@ -1,3 +1,33 @@
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <meta charset="utf-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <title>Horoscope!</title>-->
+<!--  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+<!--  <link rel="stylesheet" href="/resources/demos/style.css">-->
+<!--  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+<!--  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+<!--  <script>-->
+<!--  $( function() {-->
+<!--    var $date = $( "#datepicker" ).datepicker({ dateFormat: 'm-d-yy' });-->
+<!--  } );-->
+<!--  </script>-->
+<!--</head>-->
+<!--<body>-->
+  
+<!--  <div class="container-fluid">-->
+<!--      <h1>Horoscope!</h1>-->
+<!--      <form method="post" action="/result">-->
+<!--        Sign: <input type="text" name="sign"><br>-->
+        <!--Day: <input type="text" name="day"><br>-->
+<!--        <p>Date: <input type="text" id="datepicker" ></p>-->
+<!--        <input type="submit" value="Get my horoscope!">-->
+<!--      </form>-->
+<!--    </div>-->
+ 
+<!--</body>-->
+<!--</html>-->
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -9,7 +39,7 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
-    $( "#datepicker" ).datepicker({ dateFormat: 'm-d-yy' });
+    var $date = $( "#datepicker" ).datepicker({ dateFormat: 'm-d-yy' });
   } );
   </script>
 </head>
@@ -18,9 +48,9 @@
   <div class="container-fluid">
       <h1>Horoscope!</h1>
       <form method="post" action="/result">
-        Sign: <input type="text" name="sign"><br>
+        <!--Sign: <input type="text" name="sign"><br>-->
         <!--Day: <input type="text" name="day"><br>-->
-        <p>Date: <input type="text" id="datepicker"></p>
+        <p>Date: <input type="text" name = "date" id="datepicker" ></p>
         <input type="submit" value="Get my horoscope!">
       </form>
     </div>

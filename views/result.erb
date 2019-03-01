@@ -22,13 +22,16 @@
       <h1><%= @user_sign.capitalize + "!"%></h1>
     </div>  
       <% @daily_horoscope_hash.each do |information| %>
-        <%= information[0].capitalize.gsub('_', ' ') + ": " + information[1]%></b><br>
+
+      <span>
+        <%=  information[0].gsub("_"," ").capitalize%>
+      </span>
+        <%=":" + " " + information[1]%></b><br><br>
       <% end %>
 
        <!--https://www.ruby-forum.com/t/date-range-between-two-dates-need-help/159393/6-->
       <!--<%# (Date.parse(‘2009-02-25’)…Date.parse(‘2009-03-05’)).to_a %>-->
     </div>
-      
     
     <button id="shower">SHOW YOUR MATCH</button>
     <div>
@@ -42,6 +45,8 @@
       <span>Lucky time: 5pm</span> <br>
       <span>programmers...</span>
     </div>
+    <img src="images/<%=@user_sign%>.png">
+   
     
   
     <script>

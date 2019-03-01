@@ -22,10 +22,7 @@
       <h1><%= @user_sign.capitalize + "!"%></h1>
     </div>  
       <% @daily_horoscope_hash.each do |information| %>
-
-      <span>
         <%=  information[0].gsub("_"," ").capitalize%>
-      </span>
         <%=":" + " " + information[1]%></b><br><br>
       <% end %>
 

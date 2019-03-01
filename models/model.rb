@@ -21,79 +21,79 @@ end
 
 
 def zodiac_sign(date) 
-    date_array =date.split('-')
-    if date[0].to_i.to_i == 1
-      if date[1].to_i.to_i < 20
+    date_array =date.split('/')
+    if date_array[0].to_i.to_i == 1
+      if date_array[1].to_i.to_i < 20
         sign = 'capricorn'
       else
         sign = 'aquarius'
       end
-    elsif date[0].to_i == 2
-      if date[1].to_i < 19
+    elsif date_array[0].to_i == 2
+      if date_array[1].to_i < 19
         sign = 'aquarius'
       else
         sign = 'pisces'
       end
-    elsif date[0].to_i == 3
-      if date[1].to_i < 21
+    elsif date_array[0].to_i == 3
+      if date_array[1].to_i < 21
         sign = 'pisces'
       else
         sign = 'aries'
       end
-    elsif date[0].to_i == 4
-      if date[1].to_i < 20
-        sign = 'pries'
+    elsif date_array[0].to_i == 4
+      if date_array[1].to_i < 20
+        sign = 'aries'
       else
         sign = 'taurus'
       end
-    elsif date[0].to_i == 5
-      if date[1].to_i < 21
+    elsif date_array[0].to_i == 5
+      if date_array[1].to_i < 21
         sign = 'taurus'
       else
         sign = 'gemini'
       end
-    elsif date[0].to_i == 6
-      if date[1].to_i < 21
+    elsif date_array[0].to_i == 6
+      if date_array[1].to_i < 21
         sign = 'gemini'
       else
         sign = 'cancer'
       end
-    elsif date[0].to_i == 7
-      if date[1].to_i < 23
+    elsif date_array[0].to_i == 7
+      if date_array[1].to_i < 23
         sign = 'cancer'
       else
         sign = 'leo'
       end
-    elsif date[0].to_i == 8
-      if date[1].to_i < 23
+    elsif date_array[0].to_i == 8
+      if date_array[1].to_i < 23
         sign = 'leo'
       else
         sign = 'virgo'
       end
-    elsif date[0].to_i == 9
-      if date[1].to_i < 23
+    elsif date_array[0].to_i == 9
+      if date_array[1].to_i < 23
         sign = 'virgo'
       else
         sign = 'libra'
       end
-    elsif date[0].to_i == 10
-      if date[1].to_i < 23
+    elsif date_array[0].to_i == 10
+      if date_array[1].to_i < 23
         sign = 'libra'
       else
         sign = 'scorpio'
     end
-    elsif date[0].to_i == 11
-      if date[1].to_i < 22
+    elsif date_array[0].to_i == 11
+      if date_array[1].to_i < 22
         sign = 'scorpio'
       else
         sign = 'sagittarius'
       end
-    elsif date[0].to_i == 12
-      if date[1].to_i < 22
+    elsif date_array[0].to_i == 12
+      if date_array[1].to_i < 22
         sign = 'sagittarius'
       else
         sign = 'capricorn'
       end
     end
-     sign
+    sign
 end

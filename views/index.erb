@@ -39,7 +39,7 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
   $( function() {
-    var $date = $( "#datepicker" ).datepicker({ dateFormat: 'm-d-yy' });
+    var $date = $( "#datepicker" ).datepicker({ dateFormat: 'm/d/yy' });
   } );
   </script>
 </head>
@@ -51,6 +51,7 @@
         <!--Sign: <input type="text" name="sign"><br>-->
         <!--Day: <input type="text" name="day"><br>-->
         <p>Birthday: <input type="text" name = "date" id="datepicker" ></p>
+        <p>Enter Your Date of Birth: <input type="text" name = "date" id="datepicker" placeholder="example: 2001/1/20"required></p>
         <input type="submit" value="Get my horoscope!">
       </form>
     </div>

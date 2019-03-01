@@ -21,7 +21,7 @@ end
 
 
 def zodiac_sign(date) 
-    date_array =date.split('-')
+    date_array =date.split('/')
     if date_array[0].to_i.to_i == 1
       if date_array[1].to_i.to_i < 20
         sign = 'capricorn'

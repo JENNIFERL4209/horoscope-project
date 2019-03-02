@@ -29,8 +29,16 @@ img {
 p {
   color: white;
   clear: both;
+  padding-left:60px;
+  padding-right:60px;
 }
 
+a{
+  color: grey;
+}
+#birthday{
+  padding-left:60px;
+}
 h1 {
     
     display: inline-block;

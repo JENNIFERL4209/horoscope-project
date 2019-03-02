@@ -29,8 +29,8 @@
 <!--</html>-->
 
 <link rel="stylesheet" href="css/style.css" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
 
 <html lang="en">
 <head>
@@ -50,7 +50,11 @@
 <body>
   
   <div class="container-fluid">
+    <img src= "images/wallpaper/crystal.gif" id="crystal_1">
+    <img src= "images/wallpaper/crystal.gif" id="crystal_2">
+    
       <h1>Horoscope!</h1>
+      <br>
       <p>Our names are Jennifer Liu, Eva Noertoft, and Wei Zheng! Our project is about horoscopes, no… we are not superstitious! Well, maybe a little bit :)<br>
         <br>
         Horoscopes are a forecast of a person’s future based
@@ -64,18 +68,17 @@
         code…   MAGICAL code! <br>
         <br>We used <a href="https://github.com/sameerkumar18/aztro">Sameer Kumar’s API.</a>  Feel free to check out the API if you are interested! You can contact us by email: <u> jenniferl4209@hstat.org,</u> <u>evan2304@hstat.org </u>, and <u>weiz9762@hstat.org</u>.
           <br>
-        <br>Email us your inquiries, feedback, and suggestions. You can also contribute to our project <a href="https://github.com/JENNIFERL4209"> here</a> by submitting a pull request! </p>
+        <br>Email us your inquiries, feedback, and suggestions. You can also contribute to our project <a href="https://github.com/JENNIFERL4209"> here</a> by submitting a pull request! <br>
+        <b>Start your horoscope journey below!</b></p>
         
-        <b>Start your horoscope journey below!</b>
+        
+        
       <form method="post" action="/result">
         <!--Sign: <input type="text" name="sign"><br>-->
         <!--Day: <input type="text" name="day"><br>-->
         <p>Enter Your Birthday: <input type="text" name = "date" id="datepicker" placeholder="example: m/d/yyyy"required></p>
-        <button type="submit" id="index_submit"> <span>Get my horoscope!</span> </button>
         
-        <!--<jumbotron>-->
-          <img src ="images/zodiac/all_signs.png">
-        <!--</jumbotron>-->
+        <button type="submit" id="index_submit"> <span>Get my horoscope!</span> </button>
       </form>
     </div>
  

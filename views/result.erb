@@ -41,7 +41,7 @@
     <button id="hider">Hide</button>
     <div class="container-fluid" id="match">
       <div class = "jumbotron">
-        <h1><%= @user_sign.capitalize + "!"%></h1>
+        <h1><%= @@user_compatibility.capitalize + "!"%></h1>
       </div>  
       <% @user_compatibility_hash.each do |information| %>
         <%=  information[0].gsub("_"," ").capitalize%>

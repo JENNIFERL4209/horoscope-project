@@ -26,23 +26,26 @@ img {
   float: right;
 }
 
+
+
 p {
   color: white;
   clear: both;
-  padding-left:60px;
-  padding-right:60px;
+  padding-left:80px;
+  padding-right:80px;
 }
 
 a{
   color: grey;
 }
 #birthday{
-  padding-left:60px;
+  padding-left:80px;
 }
+
 h1 {
     
     display: inline-block;
-    margin-left: 30%;
+    margin-left: 25%;
     text-align: center;
     color: #ae57ed;
     font-family: 'Berkshire Swash', cursive;

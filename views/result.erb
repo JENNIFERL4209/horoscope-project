@@ -11,25 +11,28 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c79e99b4c495400114fe3be&product='inline-share-buttons' async='async'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <script src="js/script.js"></script> 
-    </script>
+    
+    <style>
+      #wallpaper {
+        background-image: url("../images/wallpaper/<%=@user_sign%>.png")
+      }
+    </style>
   </head>
   <body>
     <div id="wallpaper"> </div>
-   <div class="container-fluid">
-     <div class = "jumbotron">
-      <h1><%= @user_sign.capitalize + "!"%></h1>
-    </div>  
+    <div class="container-fluid">
+      <div class = "jumbotron">
+        <h1><%= @user_sign.capitalize + "!"%></h1>
+      </div>  
       <% @daily_horoscope_hash.each do |information| %>
         <%=  information[0].gsub("_"," ").capitalize%>
         <%=":" + " " + information[1]%></b><br><br>
       <% end %>
-
-       <!--https://www.ruby-forum.com/t/date-range-between-two-dates-need-help/159393/6-->
-      <!--<%# (Date.parse(‘2009-02-25’)…Date.parse(‘2009-03-05’)).to_a %>-->
     </div>
    
     <button id="shower">SHOW YOUR MATCH</button>
@@ -43,17 +46,38 @@
       <span>Lucky number: 36</span><br>
       <span>Lucky time: 5pm</span> <br>
       <span>programmers...</span>
+    
+   <div class="sharethis-inline-share-buttons"></div>
+    
+    <button>SHOW YOUR MATCH</button>
+    <button id="shower">Show</button>
+    <button id="hider">Hide</button>
+    <div class="container-fluid" id="match">
+      <div class = "jumbotron">
+        <h1><%= @user_compatibility.capitalize + "!"%></h1>
+      </div>  
+      <% @user_compatibility_hash.each do |information| %>
+        <%=  information[0].gsub("_"," ").capitalize%>
+        <%=":" + " " + information[1]%></b><br><br>
+      <% end %>
+
     </div>
+    
+
     <img src="images/zodiac/<%=@user_sign%>.png">
    
-    
-  
     <script>
-      
       $( "#shower" ).click(function() {
-        $( "span" ).show( 2000 );
+        $( "#match" ).first().show( "fast", function showNext() {
+          $( this ).next( "#match" ).show( 1000, showNext );
+        });
+      });
+       
+      $( "#hider" ).click(function() {
+        $( "#match" ).hide( 1000 );
       });
     </script>
+    
   
    
    

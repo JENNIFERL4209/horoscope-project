@@ -1,16 +1,37 @@
 require 'unirest'
 
 def get_info
-    url = 'https://aztro.sameerkumar.website?sign=sign&day=day' # the API URL
-    uri = URI(url)  
-    uri.query = "sign=#{zodiac_sign(@user_date)}&day=today" # this part will change to user inputed sign
-    uri_string = uri.to_s
-    puts uri_string
-    response = Unirest.post uri_string # dynamic API link
-    result = response.body # Parsed body # hash
-    result
+  url = 'https://aztro.sameerkumar.website?sign=sign&day=day' # the API URL
+  uri = URI(url)  
+  uri.query = "sign=#{zodiac_sign(@user_date)}&day=today" # this part will change to user inputed sign
+  uri_string = uri.to_s
+  puts uri_string
+  response = Unirest.post uri_string # dynamic API link
+  result = response.body # Parsed body # hash
+  result
 end
 
+<<<<<<< HEAD
+=======
+
+
+def get_compatibility(user_sign)
+  result = get_info
+  result["compatibility"].downcase
+end
+
+def get_compatibility_info
+  url = 'https://aztro.sameerkumar.website?sign=sign&day=day' # the API URL
+  uri = URI(url)  
+  uri.query = "sign=#{(@user_compatibility)}&day=today" # this part will change to user inputed sign
+  uri_string = uri.to_s
+  puts uri_string
+  response = Unirest.post uri_string # dynamic API link
+  result = response.body # Parsed body # hash
+  result
+end
+
+>>>>>>> 9a76cde5e8d699ce4c20518145e573841cab459e
 def zodiac_sign(date) 
     date_array =date.split('/')
     if date_array[0].to_i.to_i == 1

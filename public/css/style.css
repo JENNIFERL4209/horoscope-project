@@ -4,33 +4,130 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("../images/wallpaper/capricorn.png") no-repeat center center fixed;
-    background-size: 100%;
+    background: no-repeat center center fixed;
+    background-size: cover;
     opacity: 0.5;
+    z-index: -10
+}
+
+body {
+  background-image: linear-gradient(to bottom right,purple,#4348ef,black); 
+}
+
+img {
+   max-width: 10%;
+}
+
+#crystal_1{
+  float: left;
+}
+
+#crystal_2{
+  float: right;
+}
+
+p {
+  color: white;
+  clear: both;
+  padding-left:80px;
+  padding-right:80px;
+}
+
+a{
+  color: grey;
+}
+
+#birthday{
+  padding-left:80px;
 }
 
 h1 {
+    
+    display: inline-block;
+    margin-left: 25%;
     text-align: center;
-    color:pink;
-    font-family: 'Lato',sans-serif;
+    color: #ae57ed;
+    font-family: 'Berkshire Swash', cursive;
     font-weight:500;
 }
 
 div {
-    font-family: Optima, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-weight:300;
     /*font-size-adjust: */
 }
 
-.jumbotron:hover {
-    background: rgba(0,0,0,0.15);
+/*.jumbotron:hover{*/
+/*    background: rgba(0,0,0,0.15);*/
+/*}*/
+
+#match {
+    margin: 3px;
+    display: none;
+    text-align: center;
 }
 
-span {
-    font-weight: bold;
-    /*background: #def3ca;*/
-    /*padding: 3px;*/
-    /*float: left;*/
-    display: none;
+#index_submit {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0.025em;
+
+  background: #379aff;
+  padding: 1vw 1vw;
+  cursor: pointer;
+  border: 0;
+  border-radius: 30px;
+  min-width: 120px;
+  overflow: hidden;
+
+  position: static;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#index_submit span {
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+
+#index_submit:after,
+#index_submit:before {
+  padding: 18px 0 11px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 30px);
+  height: calc(100% - 29px);
+  width: calc(100% + 20px);
+  color: #fff;
+  border-radius: 2px;
+  transform: skew(-25deg);
+}
+
+#index_submit:after {
+  background: #fff;
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1) 0.2s;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+#index_submit:before {
+  background:#2712c2;
+  z-index: 5;
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#index_submit:hover:after {
+  left: calc(0% - 10px);
+  transition: left 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#index_submit:hover:before {
+  left: calc(0% - 10px);
+  transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
 

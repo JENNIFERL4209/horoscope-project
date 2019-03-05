@@ -26,8 +26,6 @@ img {
   float: right;
 }
 
-
-
 p {
   color: white;
   clear: both;
@@ -38,6 +36,7 @@ p {
 a{
   color: grey;
 }
+
 #birthday{
   padding-left:80px;
 }

@@ -1,13 +1,5 @@
 require 'unirest'
 
-# url = 'https://aztro.sameerkumar.website?sign=sign&day=day' # the API URL
-# uri = URI(url)  
-# uri.query = 'sign=aries&day=today'  # this part will change to user inputed sign
-# uri_string = uri.to_s
-# response = Unirest.post uri_string # dynamic API link
-# result = response.body # Parsed body # hash
-# puts result
-
 def get_info
   url = 'https://aztro.sameerkumar.website?sign=sign&day=day' # the API URL
   uri = URI(url)  
@@ -18,8 +10,6 @@ def get_info
   result = response.body # Parsed body # hash
   result
 end
-
-
 
 def get_compatibility(user_sign)
   result = get_info

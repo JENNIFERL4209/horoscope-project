@@ -11,10 +11,6 @@ def get_info
   result
 end
 
-<<<<<<< HEAD
-=======
-
-
 def get_compatibility(user_sign)
   result = get_info
   result["compatibility"].downcase
@@ -31,7 +27,6 @@ def get_compatibility_info
   result
 end
 
->>>>>>> 9a76cde5e8d699ce4c20518145e573841cab459e
 def zodiac_sign(date) 
     date_array =date.split('/')
     if date_array[0].to_i.to_i == 1

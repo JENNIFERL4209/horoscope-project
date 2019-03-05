@@ -10,7 +10,7 @@
     z-index: -10
 }
 
-body {
+.index {
   background-image: linear-gradient(to bottom right,purple,#4348ef,black); 
 }
 
@@ -26,8 +26,6 @@ img {
   float: right;
 }
 
-
-
 p {
   color: white;
   clear: both;
@@ -38,6 +36,7 @@ p {
 a{
   color: grey;
 }
+
 #birthday{
   padding-left:80px;
 }
@@ -61,7 +60,11 @@ div {
 /*.jumbotron:hover{*/
 /*    background: rgba(0,0,0,0.15);*/
 /*}*/
-
+#user_form{
+  text-align: center;
+  top:20%;
+  
+}
 #match {
     margin: 3px;
     display: none;
@@ -70,7 +73,7 @@ div {
 }
 
 #index_submit {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Hind Guntur', sans-serif;
   font-size: 15px;
   line-height: 1;
   color: #fff;
@@ -80,14 +83,13 @@ div {
   padding: 1vw 1vw;
   cursor: pointer;
   border: 0;
-  border-radius: 30px;
+  border-radius: 2px;
   min-width: 120px;
   overflow: hidden;
+  border-radius: 5px;
 
-  position: static;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 100%;
 }
 
 #index_submit span {
@@ -118,7 +120,7 @@ div {
 }
 
 #index_submit:before {
-  background:#2712c2;
+  background: #13c276;
   z-index: 5;
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
@@ -132,4 +134,5 @@ div {
   left: calc(0% - 10px);
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
+
 

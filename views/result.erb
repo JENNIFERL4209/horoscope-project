@@ -39,11 +39,12 @@
         <%=":" + " " + information[1]%></b><br><br>
       <% end %>
     </div>
+   
+    <!--<button id="shower">SHOW YOUR MATCH</button>-->
     
-   <div class="sharethis-inline-share-buttons"></div>
-    
-    <button>SHOW YOUR MATCH</button>
-    <button id="shower">Show</button>
+   <!--<div class="sharethis-inline-share-buttons"></div>-->
+  
+    <button id="shower">Show Your Match</button>
     <button id="hider">Hide</button>
     <div class="container-fluid" id="match">
       <div class = "jumbotron">
@@ -53,8 +54,8 @@
         <%=  information[0].gsub("_"," ").capitalize%>
         <%=":" + " " + information[1]%></b><br><br>
       <% end %>
+
     </div>
-    
 
     <img src="images/zodiac/<%=@user_sign%>.png">
    
@@ -69,10 +70,7 @@
         $( "#match" ).hide( 1000 );
       });
     </script>
-    
   
-   
-   
   </body>
 </html>
 

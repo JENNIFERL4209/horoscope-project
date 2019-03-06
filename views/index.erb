@@ -15,7 +15,12 @@
   
   <script>
   $( function() {
-    var $date = $( "#datepicker" ).datepicker({ dateFormat: 'm/d/yy' });
+    var $date = $( "#datepicker" ).datepicker({ 
+      dateFormat: 'd/m/yy',
+      changeMonth: true,
+      changeYear: true,
+      yearRange: 'c-100:c+20'
+    });
   } );
   </script>
 </head>
@@ -42,7 +47,7 @@
     <form method="post" action="/result">
       <!--Sign: <input type="text" name="sign"><br>-->
       <!--Day: <input type="text" name="day"><br>-->
-      <p id="birthday">Enter Your Birthday: <input type="text" name = "date" id="datepicker" placeholder="example: m/d/yyyy"required></p>
+      <p id="birthday">Enter Your Birthday: <input type="text" name = "date" id="datepicker" placeholder="example: 12/30"required></p>
       
       <button type="submit" id="index_submit"> <span>Get my horoscope!</span> </button>
     </form>

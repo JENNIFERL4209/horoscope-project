@@ -38,9 +38,11 @@
     <!--<button id="shower">SHOW YOUR MATCH</button>-->
     
    <!--<div class="sharethis-inline-share-buttons"></div>-->
-  
-    <button id="shower">Show Your Match</button>
-    <button id="hider">Hide</button>
+    <div class="container-fluid">
+      <button class="submit_btn" id="shower"><span>Show Your Match</span></button>
+      <button class="submit_btn" id="hider"><span>Hide</span></button>
+    </div>
+    
     <div class="container-fluid" id="match">
       <div class = "jumbotron">
         <h1><%= @user_compatibility.capitalize + "!"%></h1>

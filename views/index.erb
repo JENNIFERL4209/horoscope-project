@@ -15,7 +15,12 @@
   
   <script>
   $( function() {
-    var $date = $( "#datepicker" ).datepicker({ dateFormat: 'm/d/yy' });
+    var $date = $( "#datepicker" ).datepicker({ 
+      dateFormat: 'm/d/yy',
+      changeMonth: true,
+      changeYear: true,
+      yearRange: 'c-100:c-0'
+    });
   } );
   </script>
 </head>
@@ -26,18 +31,10 @@
     <img src= "images/wallpaper/crystal.gif" id="crystal_2">
       <h1>Horoscope!</h1>
       <p><br>Our names are Jennifer Liu, Eva Noertoft, and Wei Zheng! Our project is about horoscopes, no… we are not superstitious! Well, maybe a little bit :)<br>
-        <br>
-        Horoscopes are a forecast of a person’s future
-        based
-        on the relative positions of the stars and the
-        planet at the time of that person’s birth.
-        Twelve months in a year, twelve signs in a
-        horoscope. <br> 
-        <br> Here, you will explore your personality,
-        characteristics, and karmas. Begin exploring! 
-        It’s simple to use, just enter or select your
-        birthday and MAGIC will happen. BUT, it’s
-        actually
+        <br>Horoscopes are a forecast of a person’s future based on the relative positions of the stars and the planet at the time of that person’s birth.
+        Twelve months in a year, twelve signs in a horoscope. <br> 
+        <br> Here, you will explore your personality, characteristics, and karmas. Begin exploring! 
+        It’s simple to use, just enter or select your birthday and MAGIC will happen. BUT, it’s actually
         code…   MAGICAL code! <br>
         <br>We used <a href="https://github.com/sameerkumar18/aztro" target="_blank">Sameer Kumar’s API.</a>  Feel free to check out the API if you are interested! You can contact us by email: <u> jenniferl4209@hstat.org,</u> <u>evan2304@hstat.org </u>, and <u>weiz9762@hstat.org</u>.
           <br>
@@ -50,7 +47,7 @@
     <form method="post" action="/result">
       <!--Sign: <input type="text" name="sign"><br>-->
       <!--Day: <input type="text" name="day"><br>-->
-      <p id="birthday">Enter Your Birthday: <input type="text" name = "date" id="datepicker" placeholder="example: m/d/yyyy"required></p>
+      <p id="birthday">Enter Your Birthday: <input type="text" name = "date" id="datepicker" placeholder="example: 12/30"required></p>
       
       <button type="submit" id="index_submit"> <span>Get my horoscope!</span> </button>
     </form>

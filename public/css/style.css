@@ -4,9 +4,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: no-repeat center center fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), no-repeat center center;
     background-size: cover;
-    opacity: 0.5;
     z-index: -10
 }
 
@@ -16,11 +15,17 @@
 
 .container-fluid {
   text-align: center;
+  /*bootstrap needed*/
 }
 
 .introduction {
-  margin: 0 10%; 
-  /*bootstrap needed*/
+  margin: 0 10%;
+}
+
+.result {
+  margin: 0 10%;
+  font-weight: 800;
+  color: white;
 }
 
 img {

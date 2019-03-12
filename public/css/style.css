@@ -48,7 +48,7 @@ p {
 }
 
 a{
-  color: grey;
+  color: blue;
 }
 
 #birthday{
@@ -132,7 +132,7 @@ div {
 }
 
 .submit_btn:before {
-  background: #13c276;
+  background: #8712c2;
   z-index: 5;
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }

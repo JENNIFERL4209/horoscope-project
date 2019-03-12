@@ -1,76 +1,73 @@
-<!DOCTYPE html>
-<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
+<link href= "https://fonts.googleapis.com/css?family=Berkshire+Swash" rel= "stylesheet">
+<link href= "https://fonts.googleapis.com/css?family=Nunito+Sans" rel= "stylesheet">
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset= "UTF-8">
+    <meta name= "viewport" content= "width=device-width, initial-scale=1">
     <title>title</title>
     <!-- bootstrap CSS -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c79e99b4c495400114fe3be&product='inline-share-buttons' async='async'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script src="js/script.js"></script> 
+    <link rel= "stylesheet" href= "//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel= "stylesheet" href= "/resources/demos/style.css">
+    <script src= "https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src= "https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src= "https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+    <link rel= "stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script type= 'text/javascript' src= '//platform-api.sharethis.com/js/sharethis.js#property=5c79e99b4c495400114fe3be&product='inline-share-buttons' async='async'></script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel= "stylesheet" href= "css/style.css" type= "text/css">
+    <script src= "js/script.js"></script> 
     
     <style>
       #wallpaper {
-        background-image: url("../images/wallpaper/<%=@user_sign%>.png")
+        background-image: url("../images/wallpaper/<%=@user_sign%>.png") /*each sign has customized background*/
       }
     </style>
   </head>
   <body>
     
-    <img src= "images/wallpaper/crystal.gif" id="crystal_1">
-    <img src= "images/wallpaper/crystal.gif" id="crystal_2">
-    <div id="wallpaper"> </div>
-    <div class="container-fluid">
-      <div class = "container-fluid result">
-        <div class = "jumbotron">
-          <h1><%= @user_sign.capitalize + "!"%></h1>
+    <img src= "images/wallpaper/crystal.gif" id= "crystal_1">
+    <img src= "images/wallpaper/crystal.gif" id= "crystal_2">
+    <div id= "wallpaper"></div>
+    <div class= "container-fluid">
+      <div class= "container-fluid result"> <!--make another div for background"-->
+        <div class= "jumbotron">
+          <h1><%=@user_sign.capitalize + "!"%></h1>
         </div>  
-        <% @daily_horoscope_hash.each do |information| %>
-          <%=  information[0].gsub("_"," ").capitalize%>
+        <%@daily_horoscope_hash.each do |information|%> <!--go through the hash and return each information in the hash-->
+          <%=information[0].gsub("_"," ").capitalize%>
           <%=":" + " " + information[1]%></b><br><br>
-        <% end %>
+        <%end%>
       </div>
     </div>
     
-   
     <!--<button id="shower">SHOW YOUR MATCH</button>-->
-    
-   <!--<div class="sharethis-inline-share-buttons"></div>-->
-    <div class="container-fluid">
-      <button class="submit_btn" id="shower"><span>Show Your Match</span></button>
-      <button class="submit_btn" id="hider"><span>Hide</span></button>
+    <!--<div class="sharethis-inline-share-buttons"></div>-->
+    <div class= "container-fluid">
+      <button class= "submit_btn" id= "shower"><span>Show Your Match</span></button>
+      <button class= "submit_btn" id= "hider"><span>Hide</span></button>
     </div>
     
-    <div class="container-fluid" id="match">
-      <div class = "jumbotron">
-        <h1><%= @user_compatibility.capitalize + "!"%></h1>
+    <div class= "container-fluid" id= "match">
+      <div class= "jumbotron">
+        <h1><%=@user_compatibility.capitalize + "!"%></h1>
       </div>  
-      <% @user_compatibility_hash.each do |information| %>
-        <%=  information[0].gsub("_"," ").capitalize%>
+      <%@user_compatibility_hash.each do |information|%> <!--returns compatilbility based on user_sign-->
+        <%=information[0].gsub("_"," ").capitalize%>
         <%=":" + " " + information[1]%></b><br><br>
       <% end %>
-
     </div>
    
     <script>
-      $( "#shower" ).click(function() {
-        $( "#match" ).first().show( "fast", function showNext() {
-          $( this ).next( "#match" ).show( 1000, showNext );
+    // button for result.erb to show compatibility
+      $("#shower").click(function() {
+        $("#match").first().show("fast", function showNext() {
+          $(this).next("#match").show(1000,showNext);
         });
       });
        
-      $( "#hider" ).click(function() {
-        $( "#match" ).hide( 1000 );
+      $("#hider").click(function() {
+        $("#match").hide(1000);
       });
     </script>
   

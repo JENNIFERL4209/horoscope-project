@@ -4,18 +4,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), no-repeat center center;
+    opacity: 0.8;
     background-size: cover;
     z-index: -10
 }
 
 .index {
-  background: url("../images/index.jpg") no-repeat center center fixed;
+  background: url("../images/wallpaper/index.jpg") no-repeat center center fixed;
 }
 
 .container-fluid {
   text-align: center;
-  /*bootstrap needed*/
 }
 
 .introduction {
@@ -32,26 +31,26 @@ img {
    max-width: 10%;
 }
 
-#crystal_1{
+#crystal_1 {
   float: left;
 }
 
-#crystal_2{
+#crystal_2 {
   float: right;
 }
 
 p {
   color: white;
   clear: both;
-  padding-left:80px;
-  padding-right:80px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
-a{
+a {
   color: grey;
 }
 
-#birthday{
+#birthday {
   padding-left:80px;
 }
 
@@ -60,7 +59,7 @@ h1 {
     text-align: center;
     color: #ae57ed;
     font-family: 'Berkshire Swash', cursive;
-    font-weight:500;
+    font-weight: 500;
 }
 
 div {
@@ -69,14 +68,11 @@ div {
     /*font-size-adjust: */
 }
 
-/*.jumbotron:hover{*/
-/*    background: rgba(0,0,0,0.15);*/
-/*}*/
 #user_form{
   text-align: center;
-  top:20%;
-  
+  top: 20%;
 }
+
 #match {
     margin: 3px;
     display: none;
@@ -85,7 +81,6 @@ div {
 }
 
 /* submit button & effect*/
-
 .submit_btn {
   font-family: 'Hind Guntur', sans-serif;
   font-size: 15px;
@@ -146,4 +141,3 @@ div {
   left: calc(0% - 10px);
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
-

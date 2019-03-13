@@ -8,7 +8,7 @@ def get_info
   puts uri_string
   response = Unirest.post uri_string # dynamic API link
   result = response.body # Parsed body # hash
-  result
+  puts result
 end
 
 def get_compatibility(user_sign)

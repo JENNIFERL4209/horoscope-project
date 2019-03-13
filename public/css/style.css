@@ -21,6 +21,10 @@
   margin: 0 10%;
 }
 
+h1{
+  text-align: center;
+}
+
 .result {
   margin: 0 10%;
   font-weight: 800;

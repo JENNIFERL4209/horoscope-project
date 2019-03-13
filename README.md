@@ -1,12 +1,7 @@
-## Sinatra App Template
+<h1>Welcome to the CAP Horoscope Web Application!</h1>
 
-Clone this repository to use as a template for your project.
+<h2>CAP stands for Capricorn, Aquarius, and Pisces! These stands for our zodiacs!</h2>
 
-Make sure you `rm -rf .git` to break the connection with the template.
+<h3>Directions are simple!</h3> 
 
-To make a copy of the template, do `cp -r app-template apps/my-app-name` (then `git init`).
-
-
-Run `bundle install` to install gems.
-
-Then `shotgun -p $PORT -o $IP` to start the app.
+<h4>Enter your birth date and begin exploring!</h4>

@@ -16,6 +16,8 @@ class ApplicationController < Sinatra::Base
     @daily_horoscope_hash = get_info # return information in hash/array from
     @user_compatibility = get_compatibility(@user_sign)
     @user_compatibility_hash = get_compatibility_info
+    @user_lucky_number = get_lucky_number(@user_sign)
+    @user_lucky_number_fact = get_lucky_number_fact(@user_lucky_number)
     erb :result
   end
   

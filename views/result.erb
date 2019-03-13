@@ -37,7 +37,9 @@
         <%@daily_horoscope_hash.each do |information|%> <!--go through the hash and return each information in the hash-->
           <%=information[0].gsub("_"," ").capitalize%>
           <%=":" + " " + information[1]%></b><br><br>
-        <%end%>
+        <% end %>
+        
+        <%= @user_lucky_number_fact %>
       </div>
     </div>
     
@@ -57,6 +59,7 @@
         <%=":" + " " + information[1]%></b><br><br>
       <% end %>
     </div>
+
    
     <script>
     // button for result.erb to show compatibility

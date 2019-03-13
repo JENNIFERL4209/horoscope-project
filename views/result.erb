@@ -39,6 +39,8 @@
           <%=  information[0].gsub("_"," ").capitalize%>
           <%=":" + " " + information[1]%></b><br><br>
         <% end %>
+        
+        <%= @user_lucky_number_fact %>
       </div>
     </div>
     
@@ -61,6 +63,7 @@
       <% end %>
 
     </div>
+
    
     <script>
       $( "#shower" ).click(function() {

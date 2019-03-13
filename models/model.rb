@@ -28,7 +28,7 @@ def get_compatibility_info
 end
 
 def zodiac_sign(date) 
-    date_array =date.split('/')
+    date_array = date.split('/')
     if date_array[0].to_i.to_i == 1
       if date_array[1].to_i.to_i < 20
         sign = 'capricorn'
@@ -103,4 +103,20 @@ def zodiac_sign(date)
       end
     end
     sign
+end
+
+
+def get_lucky_number(user_sign)
+  result = get_info
+  result["lucky_number"]
+end
+
+def get_lucky_number_fact(number)
+  url ="http://numbersapi.com/#{number}" # the API URL
+  uri = URI(url)  
+  uri_string = uri.to_s
+  puts uri_string
+  response = Unirest.get uri_string # dynamic API link
+  result = response.body # Parsed body # hash
+  result
 end

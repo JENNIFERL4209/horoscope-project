@@ -8,7 +8,7 @@ def get_info
   puts uri_string
   response = Unirest.post uri_string # dynamic API link
   result = response.body # Parsed body # hash
-  result
+  puts result
 end
 
 def get_compatibility(user_sign)
@@ -28,7 +28,6 @@ def get_compatibility_info
 end
 
 def zodiac_sign(date) 
-
   date_array = date.split('/') # change user date input into an array
   if date_array[0].to_i == 1 #january
     if date_array[1].to_i < 20 #before january 20

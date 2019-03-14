@@ -17,6 +17,14 @@
   text-align: center;
 }
 
+.container-fluid .introduction {
+  margin: 0 15%;
+}
+
+h1{
+  text-align: center;
+}
+
 .result {
   margin: 0 10%;
   font-weight: 800;

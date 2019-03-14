@@ -11,15 +11,10 @@
 
 .index {
   background: url("../images/wallpaper/index.jpg") no-repeat center center fixed;
-  width: 100%;
 }
 
 .container-fluid {
   text-align: center;
-}
-
-.container-fluid .introduction {
-  margin: 0 15%;
 }
 
 .result {
@@ -29,7 +24,8 @@
 }
 
 img {
-   max-width: 30%;
+   max-width: 10%;
+   
 }
 
 #crystal_1 {
@@ -57,12 +53,18 @@ a {
 }
 
 h1 {
-    /*display: inline-block;*/
+    display: inline;
     text-align: center;
     color: #ae57ed;
     font-family: 'Berkshire Swash', cursive;
     font-weight: 500;
-    width: 15%;
+    font-size:3em;
+    /*width: 30%;*/
+}
+
+.index_title {
+  display: inline;
+  text-align: center;
 }
 
 div {

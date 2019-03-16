@@ -22,6 +22,15 @@
       #wallpaper {
         background-image: url("../images/wallpaper/<%=@user_sign%>.png") /*each sign has customized background*/
       }
+      
+      .text-background {
+        background-color: black;
+        opacity: 0.8;
+      } 
+      
+      .text-color {
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -30,16 +39,19 @@
     <img src= "images/wallpaper/crystal.gif" id= "crystal_2">
     <div id= "wallpaper"></div>
     <div class= "container-fluid">
-      <div class= "container-fluid result"> <!--make another div for background"-->
+      <div class= "container-fluid result">
         <div class= "jumbotron">
           <h1><%=@user_sign.capitalize + "!"%></h1>
         </div>  
-        <%@daily_horoscope_hash.each do |information|%> <!--go through the hash and return each information in the hash-->
-          <%=information[0].gsub("_"," ").capitalize%>
-          <%=":" + " " + information[1]%></b><br><br>
-        <% end %>
-        
-        <%= @user_lucky_number_fact %>
+        <div class="text-background">
+          <div class="text-color">
+            <%@daily_horoscope_hash.each do |information|%> <!--go through the hash and return each information in the hash-->
+              <%=information[0].gsub("_"," ").capitalize%>
+              <%=":" + " " + information[1]%></b><br><br>
+            <% end %>
+            <%= @user_lucky_number_fact %><br>
+          </div>
+        </div>
       </div>
     </div>
     

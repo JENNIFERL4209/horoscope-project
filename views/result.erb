@@ -53,11 +53,13 @@
     <div class= "container-fluid" id= "match">
       <div class= "jumbotron">
         <h1><%=@user_compatibility.capitalize + "!"%></h1>
-      </div>  
-      <%@user_compatibility_hash.each do |information|%> <!--returns compatilbility based on user_sign-->
-        <%=information[0].gsub("_"," ").capitalize%>
-        <%=":" + " " + information[1]%></b><br><br>
-      <% end %>
+      </div>
+      <div id = "tbg">
+        <%@user_compatibility_hash.each do |information|%> <!--returns compatilbility based on user_sign-->
+          <%=information[0].gsub("_"," ").capitalize%>
+          <%=":" + " " + information[1]%></b><br><br>
+        <% end %>
+      </div>
     </div>
 
    

@@ -26,10 +26,14 @@ h1{
 }
 
 .result {
+  margin-top: 5%;
   font-weight: 800;
   color: white;
 }
-
+#btn_div {
+  margin: 3% 0;
+  
+}
 img {
    max-width: 10%;
    
@@ -85,7 +89,6 @@ div {
 }
 
 #match {
-    margin: 3px;
     display: none;
     text-align: center;
     color: white;

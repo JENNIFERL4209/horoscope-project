@@ -120,3 +120,4 @@ def get_lucky_number_fact(number)
   result = response.body # Parsed body # hash
   result
 end
+

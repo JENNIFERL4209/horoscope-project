@@ -17,20 +17,16 @@
   text-align: center;
 }
 
-.container-fluid .introduction {
-  margin: 0 15%;
-}
-
-h1{
-  text-align: center;
-}
-
 .result {
-  margin: 0 10%;
+  margin-top: 5%;
   font-weight: 800;
   color: white;
 }
 
+#btn_div {
+  margin: 3% 0;
+  
+}
 img {
    max-width: 10%;
    
@@ -86,10 +82,13 @@ div {
 }
 
 #match {
-    margin: 3px;
     display: none;
     text-align: center;
     color: white;
+}
+
+.introduction {
+  margin: 3% 0;
 }
 
 /* submit button & effect*/
